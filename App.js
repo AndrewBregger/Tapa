@@ -25,6 +25,10 @@ export default class App extends Component<Props> {
     super(props);
     this.state = {view: 'main'};
   }
+
+  update() {
+    
+  }
   
   render() {
     // if(this.state.view == 'main') {
@@ -47,7 +51,7 @@ export default class App extends Component<Props> {
     // else if(this.state.view == 'game') {
       return (
         <View style={styles.container}>
-          <Board/>
+          <Board elemPress={this.update}/>
         </View>
       );
     // }
